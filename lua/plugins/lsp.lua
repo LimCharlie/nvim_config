@@ -100,8 +100,9 @@ return {
       vim.keymap.set("n", "<leader>wl", function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
       end, { desc = "List workspace folders", buffer = buffer })
-      vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Go to type definition", buffer = buffer })
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = buffer })
+      vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition,
+        { desc = "[G]o [T]o [T]ype [D]efinition", buffer = buffer })
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction", buffer = buffer })
       vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Check references", buffer = buffer })
     end
 

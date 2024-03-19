@@ -11,10 +11,10 @@ function keys.init()
   vim.keymap.set("n", "<leader>s", "<CMD>w<CR>", { silent = true, desc = "[S]ave [F]ile" })
   vim.keymap.set("n", "<leader>q", ":quit<Return>", { desc = "[Q]uit [F]ile" })
   -- Window cursor movement
-  vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window", silent = true })
-  vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", silent = true })
-  vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", silent = true })
-  vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", silent = true })
+  vim.keymap.set("n", "<leader>wh>", "<C-w>h", { desc = "[G]o to [L]eft [W]indow", silent = true })
+  vim.keymap.set("n", "<leader>wj>", "<C-w>j", { desc = "[G]o to [L]ower [W]indow", silent = true })
+  vim.keymap.set("n", "<leader>wk>", "<C-w>k", { desc = "[G]o to [U]pper [W]indow", silent = true })
+  vim.keymap.set("n", "<leader>wl>", "<C-w>l", { desc = "[G]o to [R]ight [W]indow", silent = true })
   -- Resize window
   vim.keymap.set("n", "<S-Up>", "<CMD>resize +2<CR>", { desc = "Increase window height", silent = true })
   vim.keymap.set("n", "<S-Down>", "<CMD>resize -2<CR>", { desc = "Decrease window height", silent = true })
@@ -32,8 +32,8 @@ function keys.init()
   vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
   vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
   -- Move lines
-  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line up", silent = true })
-  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down", silent = true })
+  vim.keymap.set("v", "<leader>k", ":m '>+1<CR>gv=gv", { desc = "[M]ove [L]ine [U]p", silent = true })
+  vim.keymap.set("v", "<leader>j", ":m '<-2<CR>gv=gv", { desc = "[M]ove [L]ine [D]own", silent = true })
 end
 
 return keys
